@@ -68,12 +68,12 @@ function divi_category_button_template($atts = [], $content = null, $tag = ''){
 		//replace categories value with new build string
 		$url =  add_query_arg( 'categories', build_category_string($categories)); 
 
-		$output .= "<a href='$url'><img src='$active_img'	onmouseover=\"this.src='$hover_img'\" onmouseout=\"this.src='$active_img'\" />";
+		$output .= "<a href='$url'><img src='$active_img'	onmouseover=\"this.src='$hover_img'\" onmouseout=\"this.src='$active_img'\" /></a>";
 		return $output;
 }
 add_shortcode('divi_category_button','divi_category_button_template');
 
-function divi_category_template($atts = [], $content = null, $tag = '') {
+function divi_blog_categories_template($atts = [], $content = null, $tag = '') {
 /** Displays posts of certain category on page using Divi Blog Template
  *  Handle Pagination
  *  Verifies category slug and gets query
@@ -140,5 +140,5 @@ function divi_category_template($atts = [], $content = null, $tag = '') {
 
 }
 
-add_shortcode('divi_categories','divi_categories_template');
+add_shortcode('divi_blog_categories','divi_blog_categories_template');
 ?>
